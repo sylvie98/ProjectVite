@@ -6,7 +6,7 @@ import Contacts from './Contacts'
 const Home = () => {
   return (
         <div className='bg-red-300 w-full h-[90vh] p-3 border border-blue-500'>
-            <div className='bg-green-300  p-5 w-full  border border-blue-500'>
+            <div className='bg-green-300  p-5 w-full  border border-blue-500  rounded-2xl'>
                 
                 <p text>Jane Doe</p>
              </div>
