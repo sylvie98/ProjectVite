@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 const Contacts = () => {
   return (
     <div>
-          <Link to={"/Contact"}>
-          <a>Contact</a>
-        </Link>
+          <Link to={"/Contacts"} className='hover:text-red-500'>Contact</Link>
     </div>
   )
 }
