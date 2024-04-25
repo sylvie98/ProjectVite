@@ -9,6 +9,7 @@ import Forgetpassword from './components/Forgetpassword'
 import Resetpassword from './components/Resetpassword'
 import Confirmation from './components/Confirmation'
 import Otherpages from './components/Otherpages'
+import Signin from './components/Signin'
 
 const App = () => {
   return (
@@ -16,16 +17,17 @@ const App = () => {
 
       <Routes>
       <Route path='/' element={<Otherpages/>}>
+      <Route path='/' element={<Signin/>}/>
       <Route path='/Signup' element={<Signup/>}/>
         <Route path='/Forgetpassword' element={<Forgetpassword />} />
         <Route path='/Resetpassword' element={<Resetpassword />} />
         <Route path='/Confirmation' element={<Confirmation />} />
         </Route>
-        {/* <Route path='/' element={<Signin/>}/> */}
+        
         <Route path='/' element={<Layout/>}>
-        <Route path='/Home' element={<Home />} />
-          <Route path='/About' element={<About />} />
-          <Route path='/Contacts' element={<Contacts />} />
+            <Route path='/Home' element={<Home />} />
+            <Route path='/About' element={<About />} />
+            <Route path='/Contacts' element={<Contacts />} />
         </Route>
        
 
