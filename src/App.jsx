@@ -16,12 +16,11 @@ const App = () => {
     <Router>
 
       <Routes>
-      <Route path='/' element={<Otherpages/>}>
-      <Route path='/' element={<Signin/>}/>
-      <Route path='/Signup' element={<Signup/>}/>
-        <Route path='/Forgetpassword' element={<Forgetpassword />} />
-        <Route path='/Resetpassword' element={<Resetpassword />} />
-        <Route path='/Confirmation' element={<Confirmation />} />
+        <Route path='/' element={<Otherpages/>}>
+          <Route path='/' element={<Signin/>}/>
+          <Route path='/Signup' element={<Signup/>}/>
+          <Route path='/Forgetpassword' element={<Forgetpassword />} />
+          <Route path='/Resetpassword' element={<Resetpassword />} />
         </Route>
         
         <Route path='/' element={<Layout/>}>
@@ -29,8 +28,6 @@ const App = () => {
             <Route path='/About' element={<About />} />
             <Route path='/Contacts' element={<Contacts />} />
         </Route>
-       
-
       </Routes>
     </Router>
   )

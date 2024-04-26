@@ -5,7 +5,7 @@ const Signin = () => {
   return (
     <div>
         <div  className=' bg-green-300 flex justify-center items-center flex-col p-3 h-[95vh] border border-red-600  w-full'>
-            <h2>LOGO HERE</h2>
+            <h2>Signin Your Account</h2>
             <div className=' bg-yellow-100 h-[50vh] mt-10 rounded-2xl border border-blue-500'>
                 <form className='flex flex-col gap-8 justify-center items-center mt-5 '>
                     <h3>LOGIN IN PAGE</h3>
