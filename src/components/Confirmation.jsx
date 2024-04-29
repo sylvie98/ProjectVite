@@ -1,22 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const Confirmation = () => {
+import React, { useState } from 'react';
+
+export default function Confirmation(){
+    
+  const [otp, setOtp] = useState (new Array(4).fill(""))
+
+
+  function handleChange (e,index){
+    if(isNaN(e.target.value))
+     return false;
+
+    setOtp([...otp.map((data, indx) => (indx ===index? e.target.value:data))])
+
+    if(e.target.value && e.target.nextSibling){
+        e.target.nextSibling.focus()
+      }
+  }
   return (
-    <div>
-        <div className=' bg-orange-200 h-[45vh] w-80'>
-            <form className='flex flex-col gap-8 justify-center items-center'>
-                <h3>CONFIRMATION PASSWORD</h3>
-                <input type='email' name='email' placeholder='Email' value={""} className=' bg-pink-300 border border-blue-500 text-blue-500 rounded-lg  p-1'/>
-                <input type="password" name='password' placeholder='Password' value={""} className=' bg-pink-300 border border-blue-500 text-blue-600 rounded-lg p-1' />
-                <input type="password" name='confirmpassword' placeholder='Confirm Password' value={""} className=' bg-pink-300 border border-blue-500 text-blue-600 rounded-lg p-1' />
-                <Link to={"/"}>
-                <button type='submit' className=' border border-blue-500 text-blue-500 bg-blue-400 rounded-lg p-1 w-48'>Confirm</button>
-                </Link>
-                
-            </form>
-        </div>
+    <div className=' bg-green-300 flex justify-center items-center flex-col p-3 h-[95vh] border border-red-600  w-full'>
+       <h2>How to Create OTP Box With React</h2> 
+       <div className='m-10 flex gap-10'>
+       {
+            otp.map((data, i)=>{
+                return <input type ="text"
+                 value={data}
+                 maxLength={1}
+                 onChange= {(e)=>handleChange(e, i)}
+                 />;
+            })
+        }
+       </div>
+       <center>
+         <button type="submit"
+         onClick={()=>alert(otp.join(""))}
+         >Submit</button></center>
+
     </div>
   )
 }
 
-export default Confirmation

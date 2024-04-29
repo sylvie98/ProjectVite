@@ -22,6 +22,7 @@ const Signin = () => {
                     <div className='flex gap-5'>
                         <Link to={"/Forgetpassword"} className=' hover:text-red-500 text-blue-500'>Forgot password</Link>
                         <Link to={"/Resetpassword"} className=' hover:text-red-500 text-blue-500'>Reset password</Link> 
+                        <Link to={"/Confirmation"} className=' hover:text-red-500 text-blue-500'>OTP</Link> 
                     </div>  
                 </form>
             </div>

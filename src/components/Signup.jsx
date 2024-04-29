@@ -23,6 +23,10 @@ const Signup = () => {
     if (formData.email === '') {
       newErrors.email = ' Please Enter your Email ';
     }
+    // else if(!/^[^\s@]+@[^\.@]+\.[^\.@]+$/.test(email)){
+    //   newErrors.email = ' Please Enter your Email ';
+    // }
+   
     if (formData.password ==='') {
       newErrors.password = ' Please Enter your  Password';
     }
